@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elevate Tutoring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background-color: #F8ECD4;
+      color: #333;
+    }
+    main {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 1000px;
+      text-align: center;
+    }
+    .top-nav {
+      background-color: #B8E0F2;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .top-nav a {
+      margin: 0 12px;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    header {
+      position: relative;
+      background: #B8E0F2;
+      padding: 60px 20px 100px;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to bottom, #B8E0F2 0%, #F8ECD4 100%);
+      mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M0,224L1440,96L1440,320L0,320Z"/></svg>');
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      background-size: cover;
+    }
+    header img {
+      height: 400px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    section {
+      padding: 40px 20px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #FF8000;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #FF8000;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    h3, h4 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    p, ul li {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.8;
+    }
+    .cta {
+      background: #B8E0F2;
+      padding: 14px 28px;
+      display: inline-block;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+    .grade-grid {
+      display: flex;
+      justify-content: center;
+      border-top: 2px solid #B8E0F2;
+      border-bottom: 2px solid #B8E0F2;
+      padding: 30px 0;
+      margin: 30px 0;
+      gap: 20px;
+      text-align: left;
+    }
+    .grade-col {
+      flex: 1;
+      padding: 0 20px;
+      border-left: 2px solid #B8E0F2;
+    }
+    .grade-col:first-child {
+      border-left: none;
+    }
+    .grade-col ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+    .centered-list {
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      margin-top: 20px;
+    }
+    .centered-list ul {
+      padding-left: 40px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Elevate</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <main>
+    <header>
+      <img src="logo1.webp" alt="Elevate Tutoring SD Logo">
+    </header>
+
+    <section id="home">
+        <h1>Empowering Every Student to Rise</h1>
+        <p>At Elevate, we believe every child has untapped potential just waiting to soar. Our personalized K-12 tutoring programs build confidence, strengthen skills, and inspire a love of learning.</p>
+        <a href="#contact" class="cta">Reach out today</a>
+      </section>
+  
+      <section id="about">
+        <h2>About Us</h2>
+        <h3>Who We Are</h3>
+        <p>Elevate was founded by educators who believe in more than just academic success—we believe in helping students grow into confident, curious, and capable learners. With decades of combined experience, we know how to reach learners at every stage and help them rise to their full potential.</p>
+        <h3>Our Mission</h3>
+        <p>To inspire growth, unlock confidence, and guide every student to their highest potential through personalized, heart-led tutoring.</p>
+      </section>
+  
+      <section id="services">
+        <h2>Services</h2>
+        <h3>Tutoring Tailored to Every Stage of Learning</h3>
+        <div class="grade-grid">
+          <div class="grade-col">
+            <h4>Elementary (K–5)</h4>
+            <ul>
+              <li>Reading fluency & comprehension</li>
+              <li>Foundational math skills</li>
+              <li>Writing support</li>
+              <li>Homework help</li>
+              <li>Enrichment & confidence-building</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <h4>Middle School (6–8)</h4>
+            <ul>
+              <li>Pre-algebra, algebra readiness</li>
+              <li>Essay writing & grammar</li>
+              <li>Study habits & organization</li>
+              <li>Reading analysis</li>
+              <li>Science & social studies</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <h4>High School (9–12)</h4>
+            <ul>
+              <li>Algebra, Geometry, Pre-Calculus</li>
+              <li>Essay writing & research papers</li>
+              <li>Academic coaching</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Homeschool Pods</h3>
+        <p>We specialize in customized homeschool pods designed to fit your family’s unique needs. Whether you want a specific group size or schedule, we’ll help create the perfect environment for learning.</p>
+      </section>
+  
+      <section id="why" style="background-color: #fdf6ec; padding: 60px 20px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); margin: 60px auto; max-width: 900px;">
+        <h2 style="color: #FF8000; font-size: 2.2rem; margin-bottom: 30px;">Why Choose Elevate?</h2>
+        <div class="centered-list">
+          <ul style="list-style: none; padding-left: 0; text-align: left; display: inline-block;">
+            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Certified, compassionate educators</li>
+            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Customized learning plans for every child</li>
+            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Flexible homeschool pod options</li>
+            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Proven academic growth</li>
+            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Support beyond grades—confidence, motivation, and joy</li>
+          </ul>
+        </div>
+        <h3 style="margin-top: 50px; font-size: 1.6rem; color: #333;">Session Types</h3>
+        <div class="centered-list">
+          <ul style="padding-left: 0; text-align: left; display: inline-block; list-style: disc; margin-top: 20px;">
+            <li style="margin-bottom: 10px; font-size: 1.1rem;">1-on-1 Tutoring (In-Person or Online)</li>
+            <li style="margin-bottom: 10px; font-size: 1.1rem;">Small Group Tutoring</li>
+            <li style="margin-bottom: 10px; font-size: 1.1rem;">Custom Learning Plans</li>
+            <li style="margin-bottom: 10px; font-size: 1.1rem;">Flexible Scheduling Options</li>
+          </ul>
+        </div>
+      </section>
+  
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <p>“Elevate changed everything for my daughter. She went from dreading math to proudly showing off her test scores. But more importantly, she believes in herself now.” – Emily</p>
+        <p>“The tutors really connect with kids. My son feels heard, challenged, and encouraged. We are so grateful for Elevate.” – Jordan</p>
+        <p>“I actually understand Algebra now. Thank you for making it make sense—and fun!” – Sofia</p>
+      </section>
+  
+      <section id="contact">
+        <h2>Contact / Book a Session</h2>
+        <p>Let’s Elevate Your Child’s Learning Together!</p>
+        <p>Email: <a href="mailto:elevate@gmail.com">elevatetutoringSD@gmail.com</a></p>
+        <p>Phone: <a href="tel:7602717063">(760) 271-7063</a></p>
+        <p>Serving North County San Diego</p>
+      </section>
+
+      <footer style="
+      background: linear-gradient(135deg, #E75B42 0%, #D44736 100%);
+      color: white;
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      height: 80px;
+      overflow: hidden;
+      position: relative;
+    ">
+      <div style="height: 100%; display: flex; align-items: center;">
+        <img src='logo2.webp'
+             alt='Elevate Tutoring SD Logo'
+             style='height: 200px; width: auto; margin-top: 30px;' />
+      </div>
+      <div style="font-size: 1.5rem; font-weight: bold;">
+        Elevate Tutoring SD
+      </div>
+    </footer>
+    
+    
+    </main>
+  </body>
+  </html>
+  
