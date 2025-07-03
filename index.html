@@ -28,35 +28,28 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .top-nav a {
-      margin: 0 12px;
+      margin: 8px 20px;
       color: #333;
       font-weight: bold;
       text-decoration: none;
       font-size: 1rem;
     }
     header {
-      position: relative;
-      background: #B8E0F2;
-      padding: 60px 20px 100px;
-      overflow: hidden;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 120px;
-      background: linear-gradient(to bottom, #B8E0F2 0%, #F8ECD4 100%);
-      mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M0,224L1440,96L1440,320L0,320Z"/></svg>');
-      mask-size: cover;
-      mask-repeat: no-repeat;
-      background-size: cover;
-    }
+  position: relative;
+  background: #B8E0F2;
+  padding: 20px 0 0; /* top padding smaller, bottom 0 */
+  overflow: hidden;
+}
+header::after {
+  display: none;
+}
     header img {
-      height: 400px;
+      height: 380px;
       width: auto;
       display: block;
       margin: 0 auto;
@@ -64,147 +57,160 @@
       z-index: 1;
     }
     section {
-      padding: 40px 20px;
-      margin-bottom: 20px;
+      padding: 16px 16px;
+      margin: 0 auto 6px;
     }
     h1 {
       color: #FF8000;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-size: 2.2rem;
+      margin-bottom: 12px;
     }
     h2 {
       color: #FF8000;
-      font-size: 2rem;
-      margin-bottom: 15px;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
     }
     h3, h4 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 6px;
       color: #333;
     }
-    p, ul li {
-      font-size: 1.2rem;
+    p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+    ul {
+      text-align: center;
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: inline-block;
+    }
+    ul li {
+      text-align: center;
+      font-size: 1.1rem;
       font-weight: 500;
       line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .grade-col ul {
+      display: inline-block;
+      text-align: center;
+    }
+    #why ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto;
+      padding-left: 0;
+      width: fit-content;
+    }
+    #why ul li {
+      display: grid;
+      grid-template-columns: 1.5rem auto;
+      align-items: start;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-align: left;
+    }
+    #why ul li::before {
+      content: "\2600";
+      color: #FF8000;
+      font-size: 1.3rem;
+      margin-right: 12px;
+    }
+    #why ul + h3 + ul li::before {
+      content: none;
+    }
+    .divider {
+      width: 60%;
+      height: 2px;
+      background-color: #B8E0F2;
+      margin: 20px auto;
     }
     .cta {
       background: #B8E0F2;
-      padding: 14px 28px;
+      padding: 12px 24px;
       display: inline-block;
       border-radius: 8px;
       text-decoration: none;
       color: #000;
       font-weight: bold;
-      font-size: 1.1rem;
-      margin-top: 20px;
+      font-size: 1rem;
+      margin-top: 12px;
     }
     .grade-grid {
       display: flex;
-      justify-content: center;
-      border-top: 2px solid #B8E0F2;
-      border-bottom: 2px solid #B8E0F2;
-      padding: 30px 0;
-      margin: 30px 0;
+      flex-direction: column;
       gap: 20px;
-      text-align: left;
+      padding: 6px 0;
+      text-align: center;
     }
     .grade-col {
-      flex: 1;
-      padding: 0 20px;
-      border-left: 2px solid #B8E0F2;
+      border: none;
+      padding: 0;
     }
-    .grade-col:first-child {
-      border-left: none;
-    }
-    .grade-col ul {
-      list-style: disc;
-      padding-left: 20px;
-    }
-    .centered-list {
-      display: flex;
-      justify-content: center;
-      text-align: left;
+    .session-types-section {
+      padding: 16px;
       margin-top: 20px;
     }
-    .centered-list ul {
-      padding-left: 40px;
-      margin: 0;
+    .session-types-section h3 {
+      font-size: 1.4rem;
+      color: #333;
+      margin-bottom: 12px;
+    }
+    .session-types-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .session-types-section ul li {
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-align: center;
+      white-space: normal;
+      max-width: 90%;
     }
     @media (max-width: 768px) {
-  .top-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 12px;
-  }
-
-  .top-nav a {
-    margin: 8px;
-    font-size: 0.95rem;
-  }
-
-  main {
-    padding: 0 12px;
-  }
-
-  .grade-grid {
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px 0;
-    text-align: center;
-  }
-
-  .grade-col {
-    border: none;
-    padding: 0;
-  }
-
-  .centered-list {
-    justify-content: center;
-  }
-
-  .centered-list ul {
-    padding-left: 0;
-  }
-
-  header img {
-    height: 180px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3, h4 {
-    font-size: 1.2rem;
-  }
-
-  p, ul li {
-    font-size: 1rem;
-  }
-
-  footer {
-    flex-direction: column;
-    height: auto;
-    padding: 24px 16px;
-    text-align: center;
-  }
-
-  footer img {
-    height: 100px;
-    margin-top: 0;
-  }
-
-  footer div {
-    font-size: 1.2rem;
-    margin-top: 12px;
-  }
+      header img {
+        height: 300px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      h3, h4 {
+        font-size: 1.1rem;
+      }
+      p, ul li {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      section {
+        padding: 12px 16px;
+      }
+    }
+    footer {
+  background: #B8E0F2;
+  height: 40px; 
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
-
+.no-wrap {
+  white-space: nowrap;
+}
   </style>
 </head>
 <body>
@@ -218,123 +224,98 @@
   </div>
   <main>
     <header>
-      <img src="logo1.webp" alt="Elevate Tutoring SD Logo">
+      <img src="logo4.webp" alt="Elevate Tutoring SD Logo">
     </header>
 
     <section id="home">
-        <h1>Empowering Every Student to Rise</h1>
-        <p>At Elevate, we believe every child has untapped potential just waiting to soar. Our personalized K-12 tutoring programs build confidence, strengthen skills, and inspire a love of learning.</p>
-        <a href="#contact" class="cta">Reach out today</a>
-      </section>
-  
-      <section id="about">
-        <h2>About Us</h2>
-        <h3>Who We Are</h3>
-        <p>Elevate was founded by educators who believe in more than just academic success—we believe in helping students grow into confident, curious, and capable learners. With decades of combined experience, we know how to reach learners at every stage and help them rise to their full potential.</p>
-        <h3>Our Mission</h3>
-        <p>To inspire growth, unlock confidence, and guide every student to their highest potential through personalized, heart-led tutoring.</p>
-      </section>
-  
-      <section id="services">
-        <h2>Services</h2>
-        <h3>Tutoring Tailored to Every Stage of Learning</h3>
-        <div class="grade-grid">
-          <div class="grade-col">
-            <h4>Elementary (K–5)</h4>
-            <ul>
-              <li>Reading fluency & comprehension</li>
-              <li>Foundational math skills</li>
-              <li>Writing support</li>
-              <li>Homework help</li>
-              <li>Enrichment & confidence-building</li>
-            </ul>
-          </div>
-          <div class="grade-col">
-            <h4>Middle School (6–8)</h4>
-            <ul>
-              <li>Pre-algebra, algebra readiness</li>
-              <li>Essay writing & grammar</li>
-              <li>Study habits & organization</li>
-              <li>Reading analysis</li>
-              <li>Science & social studies</li>
-            </ul>
-          </div>
-          <div class="grade-col">
-            <h4>High School (9–12)</h4>
-            <ul>
-              <li>Algebra, Geometry, Pre-Calculus</li>
-              <li>Essay writing & research papers</li>
-              <li>Academic coaching</li>
-            </ul>
-          </div>
-        </div>
-        <h3>Homeschool Pods</h3>
-        <p>We specialize in customized homeschool pods designed to fit your family’s unique needs. Whether you want a specific group size or schedule, we’ll help create the perfect environment for learning.</p>
-      </section>
-  
-      <section id="why" style="background-color: #fdf6ec; padding: 60px 20px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); margin: 60px auto; max-width: 900px;">
-        <h2 style="color: #FF8000; font-size: 2.2rem; margin-bottom: 30px;">Why Choose Elevate?</h2>
-        <div class="centered-list">
-          <ul style="list-style: none; padding-left: 0; text-align: left; display: inline-block;">
-            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Certified, compassionate educators</li>
-            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Customized learning plans for every child</li>
-            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Flexible homeschool pod options</li>
-            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Proven academic growth</li>
-            <li style="margin-bottom: 12px; font-size: 1.2rem;">✅ Support beyond grades—confidence, motivation, and joy</li>
-          </ul>
-        </div>
-        <h3 style="margin-top: 50px; font-size: 1.6rem; color: #333;">Session Types</h3>
-        <div class="centered-list">
-          <ul style="padding-left: 0; text-align: left; display: inline-block; list-style: disc; margin-top: 20px;">
-            <li style="margin-bottom: 10px; font-size: 1.1rem;">1-on-1 Tutoring (In-Person or Online)</li>
-            <li style="margin-bottom: 10px; font-size: 1.1rem;">Small Group Tutoring</li>
-            <li style="margin-bottom: 10px; font-size: 1.1rem;">Custom Learning Plans</li>
-            <li style="margin-bottom: 10px; font-size: 1.1rem;">Flexible Scheduling Options</li>
-          </ul>
-        </div>
-      </section>
-  
-      <section id="testimonials">
-        <h2>Testimonials</h2>
-        <p>“Elevate changed everything for my daughter. She went from dreading math to proudly showing off her test scores. But more importantly, she believes in herself now.” – Emily</p>
-        <p>“The tutors really connect with kids. My son feels heard, challenged, and encouraged. We are so grateful for Elevate.” – Jordan</p>
-        <p>“I actually understand Algebra now. Thank you for making it make sense—and fun!” – Sofia</p>
-      </section>
-  
-      <section id="contact">
-        <h2>Contact / Book a Session</h2>
-        <p>Let’s Elevate Your Child’s Learning Together!</p>
-        <p>Email: <a href="mailto:elevate@gmail.com">elevatetutoringSD@gmail.com</a></p>
-        <p>Phone: <a href="tel:7602717063">(760) 271-7063</a></p>
-        <p>Serving North County San Diego</p>
-      </section>
+      <h1>Empowering Every Student to Rise</h1>
+      <p>At Elevate, we believe every child has untapped potential just waiting to soar. Our personalized <span class="no-wrap">K-12</span> tutoring programs build confidence, strengthen skills, and inspire a love of learning.</p>
+      <a href="#contact" class="cta">Reach out today</a>
+    </section>
 
-      <footer style="
-      background: linear-gradient(135deg, #E75B42 0%, #D44736 100%);
-      color: white;
-      padding: 20px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      height: 80px;
-      overflow: hidden;
-      position: relative;
-    ">
-      <div style="height: 100%; display: flex; align-items: center;">
-        <img src='logo2.webp'
-             alt='Elevate Tutoring SD Logo'
-             style='height: 200px; width: auto; margin-top: 30px;' />
+    <section id="about">
+      <h2>About Us</h2>
+      <h3>Who We Are</h3>
+      <p>Elevate was founded by educators who believe in more than just academic success-we believe in helping students grow into confident, curious, and capable learners. With decades of experience, we know how to reach learners at every stage and help them rise to their full potential.</p>
+      <h3>Our Mission</h3>
+      <p>To inspire growth, unlock confidence, and guide every student to their highest potential through personalized, heart-led tutoring.</p>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <h3>Tutoring Tailored to Every Stage of Learning</h3>
+      <div class="grade-grid">
+        <div class="divider"></div>
+        <div class="grade-col">
+          <h4>Elementary (K–5)</h4>
+          <ul>
+            <li>Reading fluency & comprehension</li>
+            <li>Foundational math skills</li>
+            <li>Writing support</li>
+            <li>Homework help</li>
+            <li>Enrichment that builds confidence</li>
+          </ul>
+        </div>
+        <div class="grade-col">
+          <h4>Middle School (6–8)</h4>
+          <ul>
+            <li>Pre-algebra readiness</li>
+            <li>Essay writing & grammar</li>
+            <li>Study habits & organization</li>
+            <li>Reading analysis</li>
+            <li>Science & social studies</li>
+          </ul>
+        </div>
+        <div class="grade-col">
+          <h4>High School (9–12)</h4>
+          <ul>
+            <li>Algebra, Geometry, Pre-Calculus</li>
+            <li>Essay writing & research papers</li>
+            <li>Academic coaching</li>
+          </ul>
+        </div>
+        <div class="divider"></div>
       </div>
-      <div style="font-size: 1.5rem; font-weight: bold;">
-        Elevate Tutoring SD
-      </div>
+      <h3>Homeschool Pods</h3>
+      <p>We specialize in customized homeschool pods designed to fit your family’s needs. Whether you want a specific group size or schedule, we’ll help create the perfect environment for learning.</p>
+    </section>
+
+    <section id="why">
+      <h2>Why Choose Elevate?</h2>
+      <ul>
+        <li>Certified, compassionate educators</li>
+        <li>Customized learning plans for every child</li>
+        <li>Flexible homeschool pod options</li>
+        <li>Support beyond grades-confidence, motivation, and joy</li>
+      </ul>
+    </section>
+
+    <section class="session-types-section">
+      <h3>Session Types</h3>
+      <ul>
+        <li>1-on-1 Tutoring (In-Person or Online)</li>
+        <li>Small Group Tutoring</li>
+        <li>Homeschool Pods</li>
+      </ul>
+    </section>
+
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <p>“Elevate changed everything for my daughter. She went from dreading math to proudly showing off her test scores. But more importantly, she believes in herself now.” - Emily</p>
+      <p>“The tutors really connect with kids. My son feels heard, challenged, and encouraged. We are so grateful for Elevate.” - Jordan</p>
+      <p>“I actually understand Algebra now. Thank you for making it make sense, and fun!” - Sofia</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact / Book a Session</h2>
+      <p>Let’s Elevate Your Child’s Learning Together!</p>
+      <p>Email: <a href="mailto:elevatetutoringSD@gmail.com">elevatetutoringSD@gmail.com</a></p>
+      <p>Phone: <a href="tel:7602717063">(760) 271-7063</a></p>
+      <p>Serving North County San Diego</p>
+    </section>
+
+    <footer>
     </footer>
-    
-    
-    </main>
-  </body>
-  </html>
-  
+  </main>
+</body>
+</html>
